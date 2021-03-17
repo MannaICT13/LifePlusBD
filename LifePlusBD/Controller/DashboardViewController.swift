@@ -28,10 +28,13 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         loadJSONData()
         createSearchBar()
+        addLogoutBtn()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(showProfile))
         
         profileData = SqlHandler.sqlInstance.getUserData(userName: userName)
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     
@@ -90,6 +93,18 @@ class DashboardViewController: UIViewController {
         
         
         
+        
+    }
+    
+    func addLogoutBtn(){
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        
+    }
+    @objc func logout(){
+        
+        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -166,6 +181,7 @@ extension DashboardViewController  : UISearchBarDelegate,UISearchControllerDeleg
                 ($0.name?.localizedCaseInsensitiveContains(searchText))!
                 
             }
+           
             
         }
         self.showsTableView.reloadData()

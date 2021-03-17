@@ -25,6 +25,7 @@
 		2A365C2B26025A6D00E19769 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2A26025A6D00E19769 /* DetailViewController.swift */; };
 		2A365C3026025BFA00E19769 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2F26025BFA00E19769 /* Shows.swift */; };
 		2A365C352602609800E19769 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C342602609800E19769 /* DashboardTableViewCell.swift */; };
+		2A365C3B26026B2600E19769 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C3A26026B2600E19769 /* TextFieldValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2A365C2A26025A6D00E19769 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2A365C2F26025BFA00E19769 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		2A365C342602609800E19769 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		2A365C3A26026B2600E19769 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		2A365BAE2601F15E00E19769 /* LifePlusBD */ = {
 			isa = PBXGroup;
 			children = (
+				2A365C3926026B0C00E19769 /* Validation */,
 				2A365BBD2601F16100E19769 /* Info.plist */,
 				2A365BE52601F1F500E19769 /* Storyboard */,
 				2A365BE32601F1E100E19769 /* View */,
@@ -196,6 +199,14 @@
 				2A365BB82601F16100E19769 /* Assets.xcassets */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		2A365C3926026B0C00E19769 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				2A365C3A26026B2600E19769 /* TextFieldValidation.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A365C3B26026B2600E19769 /* TextFieldValidation.swift in Sources */,
 				2A365C2B26025A6D00E19769 /* DetailViewController.swift in Sources */,
 				2A365BF42601F6F300E19769 /* LoginViewController.swift in Sources */,
 				2A365C1B26024B7600E19769 /* DashboardViewController.swift in Sources */,

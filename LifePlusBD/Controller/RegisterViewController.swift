@@ -43,7 +43,16 @@ class RegisterViewController: UIViewController {
         guard let password = passwordTextField.text else {return}
         guard let phone = phoneTextField.text else {return}
         
-        SqlHandler.sqlInstance.registerUser(name: name, userName: username, password: password, phone: phone)
+        if TextFieldValidation.nameValidation(name) == false{
+            alertMessage(title: "Error Message", msg: "Enter valid Name")
+        }else if TextFieldValidation.phoneNumberValidation(phone) == false{
+            alertMessage(title: "Error Message", msg: "Enter Valid Phone Number")
+        }else {
+            SqlHandler.sqlInstance.registerUser(name: name, userName: username, password: password, phone: phone)
+        }
+        
+        
+     
         
         
     }
@@ -89,5 +98,21 @@ extension RegisterViewController{
     
     
     
+    
+}
+
+extension RegisterViewController{
+    
+    
+    func alertMessage(title:String,msg:String){
+        
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+    }
     
 }
