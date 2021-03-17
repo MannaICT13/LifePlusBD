@@ -57,7 +57,7 @@ class SqlHandler {
 
     }
     
-    func registerUser(name: String,userName:String,password:String,phone:String){
+    func registerUser(name: String,userName:String,password:String,phone:String)->Bool{
         
         var registerStat : OpaquePointer?
         let registerQuery = "INSERT INTO LifePlusBD(name,userName,password,phone) VALUES(?,?,?,?);"
@@ -70,18 +70,18 @@ class SqlHandler {
             sqlite3_bind_text(registerStat, 4, (phone as NSString).utf8String, -1, nil)
             
             if sqlite3_step(registerStat) == SQLITE_DONE {
-            
+                
                 print("Successfully Register")
+                return true
+                
             }else{
                 print("Faild to register")
-                return
+                return false
             }
-            
-
             
         }else{
             
-            return
+            return false
         }
         
         

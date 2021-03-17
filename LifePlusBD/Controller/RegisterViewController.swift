@@ -47,8 +47,20 @@ class RegisterViewController: UIViewController {
             alertMessage(title: "Error Message", msg: "Enter valid Name")
         }else if TextFieldValidation.phoneNumberValidation(phone) == false{
             alertMessage(title: "Error Message", msg: "Enter Valid Phone Number")
-        }else {
-            SqlHandler.sqlInstance.registerUser(name: name, userName: username, password: password, phone: phone)
+            
+        }
+        else if username == ""{
+            alertMessage(title: "Error Message", msg: "Enter Valid User Name")
+            
+        }
+        else if password == "" || password.count<6{
+            alertMessage(title: "Error Message", msg: "Enter password more then 5 digit")
+            
+        }else if SqlHandler.sqlInstance.registerUser(name: name, userName: username, password: password, phone: phone) == true{
+            alertMessageAction(title: "Message", msg: "Successfully Registered!")
+            
+        }else{
+            alertMessage(title: "Error Message", msg: "Already Registered")
         }
         
         
@@ -108,6 +120,20 @@ extension RegisterViewController{
         
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+    }
+    func alertMessageAction(title:String,msg:String){
+        
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+            print("xxxxxxx")
+        }
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
         
