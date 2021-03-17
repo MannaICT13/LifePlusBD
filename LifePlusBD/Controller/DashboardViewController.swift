@@ -98,7 +98,7 @@ class DashboardViewController: UIViewController {
     
     func addLogoutBtn(){
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logout))
         
     }
     @objc func logout(){
@@ -163,6 +163,11 @@ extension DashboardViewController  : UISearchBarDelegate,UISearchControllerDeleg
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
+        
+        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: "Search Shows",
+            attributes: [.foregroundColor: Utilities.color]
+        )
         
         
     }
