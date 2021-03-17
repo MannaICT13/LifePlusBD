@@ -94,6 +94,7 @@ class SqlHandler {
         var loginStat : OpaquePointer?
         let userN = userName as NSString
         let pass = password as NSString
+        
         var loginData = [loginModel]()
         
         let loginQuery = "SELECT * FROM LifePlusBD WHERE userName = '\(userN)' AND password = '\(pass)';"
@@ -125,6 +126,51 @@ class SqlHandler {
         return loginData
     }
     
+    
+    func getUserData(userName: String) ->[User]{
+        
+        var userData = [User]()
+        var getUserStat : OpaquePointer?
+    
+        let user = userName as NSString
+        let getUserQuery = "SELECT * FROM LifePlusBD WHERE userName = '\(user)';"
+        
+        if sqlite3_prepare(db, getUserQuery, -1, &getUserStat, nil) == SQLITE_OK{
+            
+            
+            
+            if sqlite3_step(getUserStat) == SQLITE_ROW{
+                
+                 let nameString = sqlite3_column_text(getUserStat, 0)
+                 let userNameString = sqlite3_column_text(getUserStat,1 )
+                 let phoneString = sqlite3_column_text(getUserStat, 3)
+                let passwordString = sqlite3_column_text(getUserStat, 2)
+                
+                let name = String(cString: nameString!)
+                let userName = String(cString: userNameString!)
+                let phone = String(cString: phoneString!)
+                let password = String(cString: passwordString!)
+                
+                
+                userData.append(User(name: name, userName: userName, password: password, phone: phone))
+            
+            }else{
+                print("Failed to get data")
+            
+                
+            }
+        }else{
+           print("Faild to prepare")
+            
+            
+        }
+        return userData
+        
+        
+        
+        
+        
+    }
     
     
     

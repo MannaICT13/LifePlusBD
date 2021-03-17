@@ -10,16 +10,19 @@ import UIKit
 class DashboardViewController: UIViewController {
 
     
-    
+
     //MARK:- Properties
     
+    var userName : String = ""
+    
+    var profileData = [User]()
     //MARK:- Init
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(showProfile))
         
-        
+        profileData = SqlHandler.sqlInstance.getUserData(userName: userName)
     }
     
     
@@ -28,6 +31,9 @@ class DashboardViewController: UIViewController {
     @objc func showProfile(){
         
         let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileDetailViewController") as! ProfileDetailViewController
+        profileVC.strName = profileData[0].name
+        profileVC.strUserName = profileData[0].userName
+        profileVC.strPhone = profileData[0].phone
         self.navigationController?.pushViewController(profileVC, animated: true)
         
         
