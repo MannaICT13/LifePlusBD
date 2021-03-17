@@ -31,9 +31,9 @@ class DashboardViewController: UIViewController {
     @objc func showProfile(){
         
         let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileDetailViewController") as! ProfileDetailViewController
-        profileVC.strName = profileData[0].name
-        profileVC.strUserName = profileData[0].userName
-        profileVC.strPhone = profileData[0].phone
+        profileVC.strName = "Name: \(String(describing: profileData[0].name!))"
+        profileVC.strUserName = "User Name: \(String(describing: profileData[0].userName!))"
+        profileVC.strPhone = "Phone: \(String(describing: profileData[0].phone!))"
         self.navigationController?.pushViewController(profileVC, animated: true)
         
         
