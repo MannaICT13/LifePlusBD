@@ -38,6 +38,13 @@ class RegisterViewController: UIViewController {
     //MARK:- Handlers
     @IBAction func registerBtnAction(_ sender: Any) {
         
+        guard let name = nameTextField.text else {return}
+        guard let username = userNameTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        guard let phone = phoneTextField.text else {return}
+        
+        SqlHandler.sqlInstance.registerUser(name: name, userName: username, password: password, phone: phone)
+        
         
     }
     
