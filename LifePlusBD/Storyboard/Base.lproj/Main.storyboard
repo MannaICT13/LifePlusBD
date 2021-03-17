@@ -366,8 +366,8 @@
                     <connections>
                         <outlet property="gobackBtnOutlet" destination="hhp-cM-KjY" id="kF3-3A-22X"/>
                         <outlet property="nameLbl" destination="MC9-2v-E8s" id="yda-Jx-Auq"/>
-                        <outlet property="phoneLbl" destination="gp4-el-VNI" id="oey-Eo-LLr"/>
-                        <outlet property="userNameLbl" destination="QBP-r2-TMp" id="jgd-vG-ogS"/>
+                        <outlet property="phoneLbl" destination="QBP-r2-TMp" id="J26-yd-1V1"/>
+                        <outlet property="userNameLbl" destination="gp4-el-VNI" id="CRL-lt-lAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ue7-SV-KdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
