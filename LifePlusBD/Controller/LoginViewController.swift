@@ -34,26 +34,37 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registrationBtnAction(_ sender: Any) {
+        
+        
+        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
-    
-    
-   private func utilitieManager(){
-        
-    Utilities.lineTextField(textField: userNameTextField)
-    Utilities.lineTextField(textField: passwordTextField)
-    Utilities.roundFillButton(button: loginBtnOutlet, color: Utilities.color)
-    Utilities.roundButton(button: registrationBtnOutlet)
-        
-        
-    }
-    
-    private func setUpImageIcon(){
-        iconImg.image = UIImage(named: "logo.jpeg")
-        userImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
-        passwordImg.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
-        
-    }
-    
+   
+
+}
 
 
+extension LoginViewController {
+    
+    
+    private func utilitieManager(){
+         
+     Utilities.lineTextField(textField: userNameTextField)
+     Utilities.lineTextField(textField: passwordTextField)
+     Utilities.roundFillButton(button: loginBtnOutlet, color: Utilities.color)
+     Utilities.roundButton(button: registrationBtnOutlet)
+         
+         
+     }
+     
+     private func setUpImageIcon(){
+         iconImg.image = UIImage(named: "logo.jpeg")
+         userImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         passwordImg.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
+         
+     }
+    
+    
+    
 }

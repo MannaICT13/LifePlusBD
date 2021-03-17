@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class Utilities {
     
-    
+    //MARK:- Properties
     static let color :UIColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
     
     static let cgColor : CGColor = CGColor(srgbRed: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
@@ -19,6 +19,9 @@ class Utilities {
 //
 //    static let cgColor : CGColor = CGColor(srgbRed: 170, green: 130, blue: 180, alpha: 1.0)
 //
+    
+    
+    //MARK:- Handlers
     static func roundFillButton(button : UIButton,color : UIColor){
         
         button.backgroundColor = color
