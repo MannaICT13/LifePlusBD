@@ -9,11 +9,14 @@ import Foundation
 
 struct User {
     
-    
+    //MARK:- Properties
     var name : String?
     var userName : String?
     var password : String?
     var phone : String?
+    
+    
+    //MARK:- Init
     
     init(name:String,userName:String,password:String,phone:String) {
         

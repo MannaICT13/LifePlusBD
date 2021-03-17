@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
-   
+    
 
 }
 
@@ -64,7 +64,5 @@ extension LoginViewController {
          passwordImg.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(Utilities.color)
          
      }
-    
-    
-    
+
 }
