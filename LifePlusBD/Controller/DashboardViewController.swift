@@ -16,10 +16,11 @@ class DashboardViewController: UIViewController {
     var userName : String = ""
     
     var profileData = [User]()
+    var showsdata = [Shows]()
     //MARK:- Init
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadJSONData()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(showProfile))
         
         profileData = SqlHandler.sqlInstance.getUserData(userName: userName)
@@ -35,6 +36,49 @@ class DashboardViewController: UIViewController {
         profileVC.strUserName = "User Name: \(String(describing: profileData[0].userName!))"
         profileVC.strPhone = "Phone: \(String(describing: profileData[0].phone!))"
         self.navigationController?.pushViewController(profileVC, animated: true)
+        
+        
+        
+    }
+    
+    
+    func loadJSONData(){
+        
+        
+        let urlStrig = "http://api.tvmaze.com/shows";
+        
+        guard let url = URL(string: urlStrig) else {return }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            do{
+                if(error == nil){
+                    
+                    self.showsdata = try JSONDecoder().decode([Shows].self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        
+                        
+                        for result in self.showsdata{
+                            
+                            print("\(String(describing: result.runtime))")
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }catch{
+                print(error.localizedDescription)
+            }
+           
+            
+            
+            
+            
+        }
+        task.resume()
+        
         
         
         
