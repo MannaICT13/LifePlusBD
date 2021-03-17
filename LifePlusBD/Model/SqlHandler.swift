@@ -89,6 +89,41 @@ class SqlHandler {
         
     }
     
+    func userLogin(userName: String,password : String) -> [loginModel]{
+        
+        var loginStat : OpaquePointer?
+        let userN = userName as NSString
+        let pass = password as NSString
+        var loginData = [loginModel]()
+        
+        let loginQuery = "SELECT * FROM LifePlusBD WHERE userName = '\(userN)' AND password = '\(pass)';"
+        
+        if sqlite3_prepare(db, loginQuery, -1, &loginStat, nil) == SQLITE_OK {
+         
+            if sqlite3_step(loginStat) == SQLITE_ROW{
+                
+                let userNameString = sqlite3_column_text(loginStat, 1)
+                let passwordString = sqlite3_column_text(loginStat, 2)
+                
+                let userName = String(cString: userNameString!)
+                let password = String(cString: passwordString!)
+                
+                loginData.append(loginModel(userName: userName, password: password))
+                
+            }else{
+                print("Faild to login")
+            }
+            
+            
+        }else{
+        
+            print("Fail to prepare in login")
+            
+        }
+        
+        
+        return loginData
+    }
     
     
     

@@ -19,18 +19,36 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtnOutlet: UIButton!
     @IBOutlet weak var registrationBtnOutlet: UIButton!
     
+    
+    var loginData = [loginModel]()
     //MARK:- init
     override func viewDidLoad() {
         super.viewDidLoad()
     utilitieManager()
     setUpImageIcon()
 
+       // loginData = SqlHandler.sqlInstance.userLogin(userName: <#T##String#>, password: <#T##String#>)
        
     }
     
     //MARK:- Handlers
     
     @IBAction func loginBtnAction(_ sender: Any) {
+        
+        guard let userName = userNameTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        loginData = SqlHandler.sqlInstance.userLogin(userName: userName, password: password)
+        
+        for login in loginData{
+            
+            if(userName == login.userName && password == login.password){
+              
+                break
+            }
+        }
+     
+      
     }
     
     @IBAction func registrationBtnAction(_ sender: Any) {
