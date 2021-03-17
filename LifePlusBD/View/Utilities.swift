@@ -10,15 +10,11 @@ import UIKit
 class Utilities {
     
     //MARK:- Properties
-    static let color :UIColor = UIColor(red: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
     
-    static let cgColor : CGColor = CGColor(srgbRed: 112.0/255.0, green: 86.0/255.0, blue: 164.0/255.0, alpha: 1.0)
-    
-    
-//    static let color :UIColor = UIColor(red: 70, green: 130, blue: 180, alpha: 1.0)
-//
-//    static let cgColor : CGColor = CGColor(srgbRed: 170, green: 130, blue: 180, alpha: 1.0)
-//
+    static let color :UIColor = UIColor(red: 28/255, green: 135/255, blue: 183/255, alpha: 1.0)
+
+    static let cgColor : CGColor = CGColor(srgbRed: 28/255, green: 135/255, blue: 183/255, alpha: 1.0)
+
     
     
     //MARK:- Handlers
@@ -54,7 +50,7 @@ class Utilities {
         
         let bottomLine = CALayer()
         
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.height-3, width: textField.frame.width, height: 3)
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height-3, width: textField.frame.width-20, height: 3)
         bottomLine.backgroundColor = cgColor
         textField.borderStyle = .none
         textField.layer.addSublayer(bottomLine)
