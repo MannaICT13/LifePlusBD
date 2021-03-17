@@ -22,6 +22,7 @@
 		2A365C13260243EC00E19769 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C12260243EC00E19769 /* loginModel.swift */; };
 		2A365C1B26024B7600E19769 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C1A26024B7600E19769 /* DashboardViewController.swift */; };
 		2A365C2326024F4300E19769 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */; };
+		2A365C2B26025A6D00E19769 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2A26025A6D00E19769 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		2A365C12260243EC00E19769 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
 		2A365C1A26024B7600E19769 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		2A365C2A26025A6D00E19769 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				2A365C0326021AE200E19769 /* RegisterViewController.swift */,
 				2A365C1A26024B7600E19769 /* DashboardViewController.swift */,
 				2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */,
+				2A365C2A26025A6D00E19769 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A365C2B26025A6D00E19769 /* DetailViewController.swift in Sources */,
 				2A365BF42601F6F300E19769 /* LoginViewController.swift in Sources */,
 				2A365C1B26024B7600E19769 /* DashboardViewController.swift in Sources */,
 				2A365C0426021AE200E19769 /* RegisterViewController.swift in Sources */,

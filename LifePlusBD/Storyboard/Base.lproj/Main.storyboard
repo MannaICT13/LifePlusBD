@@ -328,6 +328,87 @@
             </objects>
             <point key="canvasLocation" x="3078.2608695652175" y="63.616071428571423"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="G05-cl-dmg">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="LGq-Zm-6qj" customClass="DetailViewController" customModule="LifePlusBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aHL-Ld-jeO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-WR-GcH">
+                                <rect key="frame" x="20" y="94" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-0T-UnN">
+                                <rect key="frame" x="20" y="138.5" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-Vd-2Tz">
+                                <rect key="frame" x="20" y="183" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txW-K9-kcf">
+                                <rect key="frame" x="20" y="227.5" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tA-cG-ojs">
+                                <rect key="frame" x="20" y="272" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGu-HK-cPv">
+                                <rect key="frame" x="20" y="316.5" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uYe-FV-2Nz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UiN-Vd-2Tz" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="C4A-Hl-YzQ"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="XqV-0T-UnN" secondAttribute="trailing" constant="20" id="Duh-jt-C4L"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="4tA-cG-ojs" secondAttribute="trailing" constant="20" id="EP1-ui-sd9"/>
+                            <constraint firstItem="txW-K9-kcf" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="FZn-0Q-vZS"/>
+                            <constraint firstItem="1FB-WR-GcH" firstAttribute="top" secondItem="uYe-FV-2Nz" secondAttribute="top" constant="50" id="G7X-bT-M4S"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="UiN-Vd-2Tz" secondAttribute="trailing" constant="20" id="Ips-fn-Rtr"/>
+                            <constraint firstItem="4tA-cG-ojs" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="P86-tX-JfN"/>
+                            <constraint firstItem="1FB-WR-GcH" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="Tg8-b8-5eF"/>
+                            <constraint firstItem="txW-K9-kcf" firstAttribute="top" secondItem="UiN-Vd-2Tz" secondAttribute="bottom" constant="20" id="UHq-IW-7ZO"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="txW-K9-kcf" secondAttribute="trailing" constant="20" id="VFo-N8-A9w"/>
+                            <constraint firstItem="4tA-cG-ojs" firstAttribute="top" secondItem="txW-K9-kcf" secondAttribute="bottom" constant="20" id="gkz-ui-7s3"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="1FB-WR-GcH" secondAttribute="trailing" constant="20" id="hrI-jY-Vay"/>
+                            <constraint firstItem="uYe-FV-2Nz" firstAttribute="trailing" secondItem="PGu-HK-cPv" secondAttribute="trailing" constant="20" id="jxe-EM-0Ts"/>
+                            <constraint firstItem="PGu-HK-cPv" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="r6C-eO-LKh"/>
+                            <constraint firstItem="PGu-HK-cPv" firstAttribute="top" secondItem="4tA-cG-ojs" secondAttribute="bottom" constant="20" id="s0N-63-AQ2"/>
+                            <constraint firstItem="XqV-0T-UnN" firstAttribute="leading" secondItem="uYe-FV-2Nz" secondAttribute="leading" constant="20" id="uFD-cT-BSK"/>
+                            <constraint firstItem="XqV-0T-UnN" firstAttribute="top" secondItem="1FB-WR-GcH" secondAttribute="bottom" constant="20" id="xyh-0Q-baw"/>
+                            <constraint firstItem="UiN-Vd-2Tz" firstAttribute="top" secondItem="XqV-0T-UnN" secondAttribute="bottom" constant="20" id="ywg-qR-uH3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idLbl" destination="1FB-WR-GcH" id="9m6-eD-lel"/>
+                        <outlet property="language" destination="txW-K9-kcf" id="I3i-Y0-pZG"/>
+                        <outlet property="nameLbl" destination="XqV-0T-UnN" id="BQ9-8t-Etb"/>
+                        <outlet property="runtimeLbl" destination="PGu-HK-cPv" id="pfj-SH-zG1"/>
+                        <outlet property="statusLbl" destination="4tA-cG-ojs" id="Ery-LR-5Sa"/>
+                        <outlet property="typeLbl" destination="UiN-Vd-2Tz" id="K4b-vn-MZw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3O-su-EEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3814" y="54"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eeP-Df-h9j">
             <objects>
