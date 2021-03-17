@@ -132,7 +132,6 @@ extension RegisterViewController{
         let ok = UIAlertAction(title: "Ok", style: .cancel) { (action) in
             self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
-            print("xxxxxxx")
         }
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)

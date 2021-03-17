@@ -7,7 +7,7 @@
 
 import Foundation
 import SQLite3
-
+import UIKit
 class SqlHandler {
     
     
@@ -71,11 +71,11 @@ class SqlHandler {
             
             if sqlite3_step(registerStat) == SQLITE_DONE {
                 
-                print("Successfully Register")
+               // print("Successfully Register")
                 return true
                 
             }else{
-                print("Faild to register")
+              //  print("Faild to register")
                 return false
             }
             
@@ -89,7 +89,7 @@ class SqlHandler {
         
     }
     
-    func userLogin(userName: String,password : String) -> [loginModel]{
+    func userLogin(userName: String,password : String,isFail:inout Bool) -> [loginModel]{
         
         var loginStat : OpaquePointer?
         let userN = userName as NSString
@@ -108,17 +108,21 @@ class SqlHandler {
                 
                 let userName = String(cString: userNameString!)
                 let password = String(cString: passwordString!)
-                
+                isFail = true
                 loginData.append(loginModel(userName: userName, password: password))
                 
             }else{
                 print("Faild to login")
+                isFail = false
+              //  RegisterViewController().alertMessage(title: "Error Message", msg: "Entered Wrong User Name or Password")
             }
             
             
         }else{
         
             print("Fail to prepare in login")
+            isFail = false
+            
             
         }
         

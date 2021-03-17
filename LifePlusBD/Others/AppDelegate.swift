@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SqlHandler.sqlInstance.openConnection()
         SqlHandler.sqlInstance.createTable()
-        Thread.sleep(forTimeInterval: 3)
+        Thread.sleep(forTimeInterval: 2)
         
         return true
     }

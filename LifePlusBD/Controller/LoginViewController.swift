@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     
     
     var loginData = [loginModel]()
+    var isSuccess = Bool()
     //MARK:- init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +39,28 @@ class LoginViewController: UIViewController {
         guard let userName = userNameTextField.text else {return}
         guard let password = passwordTextField.text else {return}
         
-        loginData = SqlHandler.sqlInstance.userLogin(userName: userName, password: password)
+        loginData = SqlHandler.sqlInstance.userLogin(userName: userName, password: password, isFail: &isSuccess)
         
-        for login in loginData{
-            
-            if(userName == login.userName && password == login.password){
-              
-                let dashVC = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
-                dashVC.userName = userName
+        
+        if isSuccess == true{
+            for login in loginData{
                 
-                self.navigationController?.pushViewController(dashVC, animated: true)
-                break
+                if(userName == login.userName && password == login.password){
+                  
+                    let dashVC = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+                    dashVC.userName = userName
+                    
+                    self.navigationController?.pushViewController(dashVC, animated: true)
+                    break
+                }
             }
+            
+        }else{
+            self.alertMessage(title: "Error Message", msg: "Wrong User Name or Password")
         }
      
+        userNameTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
       
     }
     
@@ -89,4 +98,20 @@ extension LoginViewController {
          
      }
 
+}
+
+
+extension LoginViewController{
+    
+    
+    func alertMessage(title:String,msg:String){
+        
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+    }
 }
