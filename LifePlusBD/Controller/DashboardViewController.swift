@@ -27,7 +27,8 @@ class DashboardViewController: UIViewController {
     
     @objc func showProfile(){
         
-        print("hello")
+        let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileDetailViewController") as! ProfileDetailViewController
+        self.navigationController?.pushViewController(profileVC, animated: true)
         
         
         

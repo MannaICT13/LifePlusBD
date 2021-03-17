@@ -21,6 +21,7 @@
 		2A365C0E2602286B00E19769 /* SqlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C0D2602286B00E19769 /* SqlHandler.swift */; };
 		2A365C13260243EC00E19769 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C12260243EC00E19769 /* loginModel.swift */; };
 		2A365C1B26024B7600E19769 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C1A26024B7600E19769 /* DashboardViewController.swift */; };
+		2A365C2326024F4300E19769 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		2A365C0D2602286B00E19769 /* SqlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlHandler.swift; sourceTree = "<group>"; };
 		2A365C12260243EC00E19769 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
 		2A365C1A26024B7600E19769 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				2A365BF32601F6F300E19769 /* LoginViewController.swift */,
 				2A365C0326021AE200E19769 /* RegisterViewController.swift */,
 				2A365C1A26024B7600E19769 /* DashboardViewController.swift */,
+				2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				2A365C0426021AE200E19769 /* RegisterViewController.swift in Sources */,
 				2A365C092602277000E19769 /* User.swift in Sources */,
 				2A365BB02601F15E00E19769 /* AppDelegate.swift in Sources */,
+				2A365C2326024F4300E19769 /* ProfileDetailViewController.swift in Sources */,
 				2A365BFF2602013400E19769 /* Utilities.swift in Sources */,
 				2A365C13260243EC00E19769 /* loginModel.swift in Sources */,
 				2A365C0E2602286B00E19769 /* SqlHandler.swift in Sources */,

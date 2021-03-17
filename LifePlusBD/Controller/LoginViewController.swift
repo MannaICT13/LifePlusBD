@@ -44,6 +44,9 @@ class LoginViewController: UIViewController {
             
             if(userName == login.userName && password == login.password){
               
+                let dashVC = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
+                
+                self.navigationController?.pushViewController(dashVC, animated: true)
                 break
             }
         }

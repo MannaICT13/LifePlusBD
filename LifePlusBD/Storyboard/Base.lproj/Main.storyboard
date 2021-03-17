@@ -263,6 +263,71 @@
             </objects>
             <point key="canvasLocation" x="2280" y="73"/>
         </scene>
+        <!--Profile Detail View Controller-->
+        <scene sceneID="r6m-y6-P8H">
+            <objects>
+                <viewController storyboardIdentifier="ProfileDetailViewController" id="I8n-FP-4qU" customClass="ProfileDetailViewController" customModule="LifePlusBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g92-1g-JzI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC9-2v-E8s">
+                                <rect key="frame" x="20" y="104" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBP-r2-TMp">
+                                <rect key="frame" x="20" y="204" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-el-VNI">
+                                <rect key="frame" x="20" y="154" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-cM-KjY">
+                                <rect key="frame" x="20" y="294" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9qv-hJ-46C"/>
+                                </constraints>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBackAction:" destination="I8n-FP-4qU" eventType="touchUpInside" id="5MG-6D-UVi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Rj-2i-6fv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hhp-cM-KjY" firstAttribute="top" secondItem="QBP-r2-TMp" secondAttribute="bottom" constant="60" id="J3g-JH-xZa"/>
+                            <constraint firstItem="2Rj-2i-6fv" firstAttribute="trailing" secondItem="QBP-r2-TMp" secondAttribute="trailing" constant="20" id="NDg-2Y-TFO"/>
+                            <constraint firstItem="2Rj-2i-6fv" firstAttribute="trailing" secondItem="gp4-el-VNI" secondAttribute="trailing" constant="20" id="Rub-x2-AJh"/>
+                            <constraint firstItem="MC9-2v-E8s" firstAttribute="leading" secondItem="2Rj-2i-6fv" secondAttribute="leading" constant="20" id="TDo-Jw-Mng"/>
+                            <constraint firstItem="gp4-el-VNI" firstAttribute="leading" secondItem="2Rj-2i-6fv" secondAttribute="leading" constant="20" id="Vtj-q9-ZOp"/>
+                            <constraint firstItem="QBP-r2-TMp" firstAttribute="top" secondItem="gp4-el-VNI" secondAttribute="bottom" constant="20" id="aeO-N1-6vm"/>
+                            <constraint firstItem="2Rj-2i-6fv" firstAttribute="trailing" secondItem="hhp-cM-KjY" secondAttribute="trailing" constant="20" id="brB-Dq-qN9"/>
+                            <constraint firstItem="QBP-r2-TMp" firstAttribute="leading" secondItem="2Rj-2i-6fv" secondAttribute="leading" constant="20" id="o84-1B-32c"/>
+                            <constraint firstItem="hhp-cM-KjY" firstAttribute="leading" secondItem="2Rj-2i-6fv" secondAttribute="leading" constant="20" id="pJJ-Uo-FaJ"/>
+                            <constraint firstItem="2Rj-2i-6fv" firstAttribute="trailing" secondItem="MC9-2v-E8s" secondAttribute="trailing" constant="20" id="pS3-qS-Ff3"/>
+                            <constraint firstItem="MC9-2v-E8s" firstAttribute="top" secondItem="2Rj-2i-6fv" secondAttribute="top" constant="60" id="xpG-QW-SQF"/>
+                            <constraint firstItem="gp4-el-VNI" firstAttribute="top" secondItem="MC9-2v-E8s" secondAttribute="bottom" constant="20" id="z0Q-aa-tpl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gobackBtnOutlet" destination="hhp-cM-KjY" id="kF3-3A-22X"/>
+                        <outlet property="nameLbl" destination="MC9-2v-E8s" id="yda-Jx-Auq"/>
+                        <outlet property="phoneLbl" destination="gp4-el-VNI" id="oey-Eo-LLr"/>
+                        <outlet property="userNameLbl" destination="QBP-r2-TMp" id="jgd-vG-ogS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ue7-SV-KdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3078.2608695652175" y="63.616071428571423"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eeP-Df-h9j">
             <objects>
