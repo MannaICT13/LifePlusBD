@@ -100,6 +100,9 @@ extension DashboardViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         showsdata.count
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell :DashboardTableViewCell = showsTableView.dequeueReusableCell(withIdentifier: "cell") as! DashboardTableViewCell
@@ -108,6 +111,21 @@ extension DashboardViewController : UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let detailVC : DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        detailVC.id = showsdata[indexPath.row].id
+        detailVC.name = showsdata[indexPath.row].name
+        detailVC.type = showsdata[indexPath.row].type
+        detailVC.langu = showsdata[indexPath.row].language
+        detailVC.status = showsdata[indexPath.row].status
+        detailVC.runtime = showsdata[indexPath.row].runtime
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
+        
+    }
     
 
     
