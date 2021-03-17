@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
 
     //MARK:- Properties
     
+    @IBOutlet weak var showsTableView: UITableView!
     var userName : String = ""
     
     var profileData = [User]()
@@ -58,12 +59,13 @@ class DashboardViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         
+//
+//                        for result in self.showsdata{
+//
+//                            print("\(String(describing: result.runtime))")
+//
+//                        }
                         
-                        for result in self.showsdata{
-                            
-                            print("\(String(describing: result.runtime))")
-                            
-                        }
                     }
                     
                     
@@ -87,4 +89,27 @@ class DashboardViewController: UIViewController {
     
     
 
+}
+
+extension DashboardViewController : UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        showsdata.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell :DashboardTableViewCell = showsTableView.dequeueReusableCell(withIdentifier: "cell") as! DashboardTableViewCell
+        cell.nameLbl.text = showsdata[indexPath.row].name
+        
+        return cell
+    }
+    
+    
+
+    
+    
 }

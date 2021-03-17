@@ -24,6 +24,7 @@
 		2A365C2326024F4300E19769 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */; };
 		2A365C2B26025A6D00E19769 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2A26025A6D00E19769 /* DetailViewController.swift */; };
 		2A365C3026025BFA00E19769 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C2F26025BFA00E19769 /* Shows.swift */; };
+		2A365C352602609800E19769 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365C342602609800E19769 /* DashboardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2A365C2226024F4300E19769 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		2A365C2A26025A6D00E19769 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2A365C2F26025BFA00E19769 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
+		2A365C342602609800E19769 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2A365BFE2602013400E19769 /* Utilities.swift */,
+				2A365C342602609800E19769 /* DashboardTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				2A365BFF2602013400E19769 /* Utilities.swift in Sources */,
 				2A365C13260243EC00E19769 /* loginModel.swift in Sources */,
 				2A365C0E2602286B00E19769 /* SqlHandler.swift in Sources */,
+				2A365C352602609800E19769 /* DashboardTableViewCell.swift in Sources */,
 				2A365C3026025BFA00E19769 /* Shows.swift in Sources */,
 				2A365BB22601F15E00E19769 /* SceneDelegate.swift in Sources */,
 			);
