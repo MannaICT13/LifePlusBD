@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2A365BB02601F15E00E19769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BAF2601F15E00E19769 /* AppDelegate.swift */; };
 		2A365BB22601F15E00E19769 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BB12601F15E00E19769 /* SceneDelegate.swift */; };
-		2A365BB42601F15E00E19769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BB32601F15E00E19769 /* ViewController.swift */; };
 		2A365BB72601F15E00E19769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A365BB52601F15E00E19769 /* Main.storyboard */; };
 		2A365BB92601F16100E19769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A365BB82601F16100E19769 /* Assets.xcassets */; };
 		2A365BBC2601F16100E19769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A365BBA2601F16100E19769 /* LaunchScreen.storyboard */; };
 		2A365BC72601F16100E19769 /* LifePlusBDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BC62601F16100E19769 /* LifePlusBDTests.swift */; };
 		2A365BD22601F16100E19769 /* LifePlusBDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BD12601F16100E19769 /* LifePlusBDUITests.swift */; };
+		2A365BF42601F6F300E19769 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A365BF32601F6F300E19769 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		2A365BAC2601F15E00E19769 /* LifePlusBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifePlusBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A365BAF2601F15E00E19769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A365BB12601F15E00E19769 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A365BB32601F15E00E19769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A365BB62601F15E00E19769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A365BB82601F16100E19769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A365BBB2601F16100E19769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		2A365BCD2601F16100E19769 /* LifePlusBDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifePlusBDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A365BD12601F16100E19769 /* LifePlusBDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePlusBDUITests.swift; sourceTree = "<group>"; };
 		2A365BD32601F16100E19769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A365BF32601F6F300E19769 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,12 @@
 		2A365BAE2601F15E00E19769 /* LifePlusBD */ = {
 			isa = PBXGroup;
 			children = (
-				2A365BAF2601F15E00E19769 /* AppDelegate.swift */,
-				2A365BB12601F15E00E19769 /* SceneDelegate.swift */,
-				2A365BB32601F15E00E19769 /* ViewController.swift */,
-				2A365BB52601F15E00E19769 /* Main.storyboard */,
-				2A365BB82601F16100E19769 /* Assets.xcassets */,
-				2A365BBA2601F16100E19769 /* LaunchScreen.storyboard */,
 				2A365BBD2601F16100E19769 /* Info.plist */,
+				2A365BE52601F1F500E19769 /* Storyboard */,
+				2A365BE32601F1E100E19769 /* View */,
+				2A365BE22601F1D400E19769 /* Controller */,
+				2A365BE42601F1EE00E19769 /* Model */,
+				2A365BE92601F23F00E19769 /* Others */,
 			);
 			path = LifePlusBD;
 			sourceTree = "<group>";
@@ -126,6 +125,47 @@
 				2A365BD32601F16100E19769 /* Info.plist */,
 			);
 			path = LifePlusBDUITests;
+			sourceTree = "<group>";
+		};
+		2A365BE22601F1D400E19769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A365BF32601F6F300E19769 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A365BE32601F1E100E19769 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A365BE42601F1EE00E19769 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A365BE52601F1F500E19769 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2A365BB52601F15E00E19769 /* Main.storyboard */,
+				2A365BBA2601F16100E19769 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2A365BE92601F23F00E19769 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				2A365BAF2601F15E00E19769 /* AppDelegate.swift */,
+				2A365BB12601F15E00E19769 /* SceneDelegate.swift */,
+				2A365BB82601F16100E19769 /* Assets.xcassets */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +247,7 @@
 				};
 			};
 			buildConfigurationList = 2A365BA72601F15E00E19769 /* Build configuration list for PBXProject "LifePlusBD" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -258,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A365BB42601F15E00E19769 /* ViewController.swift in Sources */,
+				2A365BF42601F6F300E19769 /* LoginViewController.swift in Sources */,
 				2A365BB02601F15E00E19769 /* AppDelegate.swift in Sources */,
 				2A365BB22601F15E00E19769 /* SceneDelegate.swift in Sources */,
 			);
