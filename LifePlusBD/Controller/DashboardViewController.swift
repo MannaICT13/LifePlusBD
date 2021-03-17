@@ -18,10 +18,17 @@ class DashboardViewController: UIViewController {
     
     var profileData = [User]()
     var showsdata = [Shows]()
+    
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
     //MARK:- Init
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSONData()
+        createSearchBar()
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(showProfile))
         
         profileData = SqlHandler.sqlInstance.getUserData(userName: userName)
@@ -58,7 +65,7 @@ class DashboardViewController: UIViewController {
                     self.showsdata = try JSONDecoder().decode([Shows].self, from: data!)
                     
                     DispatchQueue.main.async {
-                        
+                        self.showsTableView.reloadData()
 //
 //                        for result in self.showsdata{
 //
@@ -128,6 +135,48 @@ extension DashboardViewController : UITableViewDelegate,UITableViewDataSource{
     }
     
 
+    
+    
+}
+
+extension DashboardViewController  : UISearchBarDelegate,UISearchControllerDelegate,UISearchResultsUpdating {
+  
+    
+    private func createSearchBar(){
+        
+        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        
+        
+    }
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        
+        guard let searchText = searchController.searchBar.text else{return}
+        
+        if(searchText == ""){
+           loadJSONData()
+        }else{
+            
+            showsdata = showsdata.filter{
+                ($0.name?.localizedCaseInsensitiveContains(searchText))!
+                
+            }
+            
+        }
+        self.showsTableView.reloadData()
+        
+    }
+    
+    
+    
+    
+    
+    
     
     
 }
